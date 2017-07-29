@@ -11,7 +11,7 @@ public class Application {
    public Application(){
 
    }
-    public Application(Map<String, MenuOption> menu, Console console) {
+    public Application(Map<String, MenuOption> menu, Console console,Library library) {
 //        this.library = library;
         this.console = console;
         this.menu = menu;
@@ -26,7 +26,9 @@ public class Application {
 
       while(!n.equals("4")){
 
+          System.out.print(menu.containsKey(n)+"ooooo");
           if (menu.containsKey(n)) {
+
               menu.get(n).execute();
           } else {
               System.out.println("Select a valid option!");
