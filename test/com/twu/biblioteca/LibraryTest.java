@@ -12,8 +12,16 @@ import java.util.List;
 public class LibraryTest {
     private List<Book> bookList;
     private List<Book> booksCheckedOut;
+
+    private List<Movie> movieList;
+    private List<Movie> MoviesCheckedOut;
+
     private Book book1;
     private Book checkedOutBook1;
+
+    private Movie MovieCheckedOut1;
+    private Movie Movie1;
+
     private Library myLibrary;
 
     @Before
@@ -22,11 +30,19 @@ public class LibraryTest {
         book1 = mock(Book.class);
         bookList.add(book1);
 
+        movieList = new ArrayList<Movie>();
+        Movie1 = mock(Movie.class);
+        movieList.add(Movie1);
+
         booksCheckedOut = new ArrayList<Book>();
         checkedOutBook1 = mock(Book.class);
         booksCheckedOut.add(checkedOutBook1);
 
-        myLibrary = new Library(bookList, booksCheckedOut );
+        MoviesCheckedOut = new ArrayList<Movie>();
+        MovieCheckedOut1 = mock(Movie.class);
+        MoviesCheckedOut.add(MovieCheckedOut1);
+
+        myLibrary = new Library(bookList, booksCheckedOut,movieList,MoviesCheckedOut);
     }
 
     @Test

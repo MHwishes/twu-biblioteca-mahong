@@ -1,7 +1,6 @@
 package com.twu.biblioteca;
 
 import java.util.Map;
-import java.util.Scanner;
 
 public class Application {
     private Library library;

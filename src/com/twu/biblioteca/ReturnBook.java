@@ -1,8 +1,6 @@
 package com.twu.biblioteca;
 
-import java.util.Scanner;
-
-public class ReturnBook implements MenuOption{
+public class ReturnBook implements MenuOption {
     private Library library;
     private Console console;
 

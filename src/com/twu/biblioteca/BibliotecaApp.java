@@ -33,7 +33,19 @@ public class BibliotecaApp {
         checkoutOfBooks.add(checkedOutBook1);
         checkoutOfBooks.add(checkedOutBook2);
 
-        return new Library(listOfBooks,checkoutOfBooks);
+        List<Movie> listOfMovie = new ArrayList<Movie>();
+        Movie movie1 = new Movie("yuyuyu", "2017", "zhang","6");
+        Movie movie2 = new Movie("ccccc", "2019", "zhang2","6");
+        listOfMovie.add(movie1);
+        listOfMovie.add(movie2);
+
+        List<Movie> checkoutOfMovies = new ArrayList<Movie>();
+        Movie checkedOutMove1 = new Movie("wind", "2016", "ma","7");
+        Movie checkedOutMove2 = new Movie("rain", "2017", "zhao","10");
+        checkoutOfMovies.add(checkedOutMove1);
+        checkoutOfMovies.add(checkedOutMove2);
+
+        return new Library(listOfBooks,checkoutOfBooks,listOfMovie,checkoutOfMovies);
 
 
     }

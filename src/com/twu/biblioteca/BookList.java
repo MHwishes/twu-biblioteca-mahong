@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class BookList  implements MenuOption{
+public class BookList  implements MenuOption {
 
     private Library library;
 

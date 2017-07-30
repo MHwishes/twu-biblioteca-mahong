@@ -1,8 +1,6 @@
 package com.twu.biblioteca;
 
 
-import org.hamcrest.MatcherAssert;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.containsString;

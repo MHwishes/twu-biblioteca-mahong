@@ -6,11 +6,15 @@ import java.util.List;
 public class Library {
     private List<Book> bookList;
     private List<Book> booksCheckedOut;
+    private List<Movie> movieList;
+    private List<Movie> movieCheckedOut;
 
 
-    public Library(List<Book> bookList, List<Book> booksCheckedOut) {
+    public Library(List<Book> bookList, List<Book> booksCheckedOut,List<Movie> movieList, List<Movie> movieCheckedOut) {
         this.bookList = bookList;
         this.booksCheckedOut = booksCheckedOut;
+        this.movieCheckedOut = movieCheckedOut;
+        this.movieList = movieList;
     }
 
 
