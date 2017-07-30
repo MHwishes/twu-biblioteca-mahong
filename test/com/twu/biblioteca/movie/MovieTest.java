@@ -1,5 +1,6 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.movie;
 
+import com.twu.biblioteca.bean.Movie;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.containsString;

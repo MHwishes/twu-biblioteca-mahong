@@ -1,5 +1,8 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.book;
 
+import com.twu.biblioteca.Console;
+import com.twu.biblioteca.Library;
+import com.twu.biblioteca.Option.BookOption.ReturnBook;
 import org.junit.Before;
 import org.junit.Test;
 

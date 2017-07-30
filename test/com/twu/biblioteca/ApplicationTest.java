@@ -1,5 +1,8 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Option.BookOption.BookList;
+import com.twu.biblioteca.Option.BookOption.CheckoutBook;
+import com.twu.biblioteca.Option.BookOption.ReturnBook;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.HashMap;

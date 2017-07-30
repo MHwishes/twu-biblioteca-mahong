@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.bean;
 
 
 public class User {
@@ -8,7 +8,7 @@ public class User {
     private String phoneNumber;
     private String password;
 
-    User(String name, String email, String phoneNumber, String password, String libraryNumber) {
+    public User(String name, String email, String phoneNumber, String password, String libraryNumber) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -17,12 +17,12 @@ public class User {
 
     }
 
-    User(String password, String libraryNumber) {
+    public User(String password, String libraryNumber) {
         this.password = password;
         this.libraryNumber = libraryNumber;
     }
 
-    User(String name, String email, String phoneNumber) {
+    public User(String name, String email, String phoneNumber) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;

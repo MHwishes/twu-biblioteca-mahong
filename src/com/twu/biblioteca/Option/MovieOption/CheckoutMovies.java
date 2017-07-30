@@ -1,12 +1,16 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Option.MovieOption;
 
-public class CheckoutMovies implements MenuOption{
+import com.twu.biblioteca.Console;
+import com.twu.biblioteca.Library;
+import com.twu.biblioteca.MenuOption;
+
+public class CheckoutMovies implements MenuOption {
     private Library library;
     private Console console;
 
-    CheckoutMovies(Library library,Console console) {
+    public CheckoutMovies(Library library, Console console) {
         this.library = library;
-        this.console=console;
+        this.console = console;
     }
 
     @Override
@@ -14,9 +18,9 @@ public class CheckoutMovies implements MenuOption{
         library.displayMoviesWithNumbers();
         System.out.print("Choose a movie: ");
 
-        String n=console.getUserInput();
+        String n = console.getUserInput();
 
-        if(library.checkoutMovie(Integer.parseInt(n))) {
+        if (library.checkoutMovie(Integer.parseInt(n))) {
             System.out.println("Thank you! Enjoy your movie.");
         } else {
             System.out.println("That movie is not available.");

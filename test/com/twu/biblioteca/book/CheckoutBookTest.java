@@ -1,35 +1,39 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.book;
 
+import com.twu.biblioteca.Console;
+import com.twu.biblioteca.Library;
+import com.twu.biblioteca.Option.BookOption.CheckoutBook;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
-public class CheckoutMovieTest {
+public class CheckoutBookTest {
+
     private Library library;
-    private CheckoutMovies checkoutMovies;
+    private CheckoutBook checkoutBook;
     private Console console;
 
     @Before
     public void setUp() throws Exception {
         library = mock(Library.class);
         console = mock(Console.class);
-        checkoutMovies = new CheckoutMovies(library,console);
+        checkoutBook = new CheckoutBook(library,console);
         when(console.getUserInput()).thenReturn("1");
     }
 
 
     @Test
-    public void shouldCheckoutMoviesFromLibrary() {
-        checkoutMovies.execute();
-        verify(library).checkoutMovie(1);
+    public void shouldCheckoutBookFromLibrary() {
+        checkoutBook.execute();
+        verify(library).checkoutBook(1);
     }
 
     @Test
     public void shouldGetInputFromConsoleOnExecute() {
-        checkoutMovies.execute();
+        checkoutBook.execute();
         verify(console).getUserInput();
     }
 

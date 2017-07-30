@@ -1,12 +1,16 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Option.MovieOption;
 
-public class ReturnMovies implements MenuOption{
+import com.twu.biblioteca.Console;
+import com.twu.biblioteca.Library;
+import com.twu.biblioteca.MenuOption;
+
+public class ReturnMovies implements MenuOption {
     private Library library;
     private Console console;
 
-    ReturnMovies(Library library,Console console){
-        this.library=library;
-        this.console=console;
+    public ReturnMovies(Library library, Console console) {
+        this.library = library;
+        this.console = console;
     }
 
     @Override
@@ -14,9 +18,9 @@ public class ReturnMovies implements MenuOption{
         library.displayCheckedOutMoviesWithNumbers();
         System.out.print("Choose a move: ");
 
-        String n=console.getUserInput();
+        String n = console.getUserInput();
 
-        if(library.returnMovie(Integer.parseInt(n))) {
+        if (library.returnMovie(Integer.parseInt(n))) {
             System.out.println("Thank you for returning the movie.");
         } else {
             System.out.println("That is not a valid movie to return.");

@@ -1,6 +1,10 @@
 package com.twu.biblioteca;
 
 
+import com.twu.biblioteca.bean.Book;
+import com.twu.biblioteca.bean.Movie;
+import com.twu.biblioteca.bean.User;
+
 import java.util.List;
 
 public class Library {

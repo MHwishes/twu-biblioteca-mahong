@@ -1,22 +1,26 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Option.BookOption;
+
+import com.twu.biblioteca.Console;
+import com.twu.biblioteca.Library;
+import com.twu.biblioteca.MenuOption;
 
 public class CheckoutBook implements MenuOption {
     private Library library;
     private Console console;
 
-     CheckoutBook(Library library,Console console) {
+    public CheckoutBook(Library library, Console console) {
         this.library = library;
-        this.console=console;
+        this.console = console;
     }
 
     @Override
     public void execute() {
-       library.displayBooksWithNumbers();
+        library.displayBooksWithNumbers();
         System.out.print("Choose a book: ");
 
-        String n=console.getUserInput();
+        String n = console.getUserInput();
 
-        if(library.checkoutBook(Integer.parseInt(n))) {
+        if (library.checkoutBook(Integer.parseInt(n))) {
             System.out.println("Thank you! Enjoy your book.");
         } else {
             System.out.println("That book is not available.");

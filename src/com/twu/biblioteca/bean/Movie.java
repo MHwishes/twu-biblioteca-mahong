@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.bean;
 public class Movie {
     private  String name;
     private String year;

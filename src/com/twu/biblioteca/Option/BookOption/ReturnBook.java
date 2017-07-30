@@ -1,12 +1,16 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Option.BookOption;
+
+import com.twu.biblioteca.Console;
+import com.twu.biblioteca.Library;
+import com.twu.biblioteca.MenuOption;
 
 public class ReturnBook implements MenuOption {
     private Library library;
     private Console console;
 
-    ReturnBook(Library library,Console console) {
+    public ReturnBook(Library library, Console console) {
         this.library = library;
-        this.console=console;
+        this.console = console;
     }
 
     @Override
@@ -14,9 +18,9 @@ public class ReturnBook implements MenuOption {
         library.displayCheckedOutBooksWithNumbers();
         System.out.print("Choose a book: ");
 
-        String n=console.getUserInput();
+        String n = console.getUserInput();
 
-        if(library.returnBook(Integer.parseInt(n))) {
+        if (library.returnBook(Integer.parseInt(n))) {
             System.out.println("Thank you for returning the book.");
         } else {
             System.out.println("That is not a valid book to return.");
