@@ -13,7 +13,7 @@ public class Application {
     }
 
     public void start() {
-        while(true) {
+        while (true) {
             if (console.isSuccessfulLogin()) {
                 console.displayWelcomeInfo();
                 System.out.println("*******************************************************************");
@@ -23,7 +23,7 @@ public class Application {
                 String n = console.getUserInput();
 
                 while (true) {
-                    if(n.equals("7")){
+                    if (n.equals("7")) {
                         System.exit(-1);
                     }
                     if (menu.containsKey(n)) {

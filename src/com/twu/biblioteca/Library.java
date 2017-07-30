@@ -24,6 +24,12 @@ public class Library {
         }
     }
 
+    public void displayMovies() {
+        for (Movie movie : movieList) {
+            System.out.println(movie.getMovieDetail());
+        }
+    }
+
     public void displayBooksWithNumbers() {
         for (int i = 1; i <= bookList.size(); i++) {
             System.out.print(i + ". ");
