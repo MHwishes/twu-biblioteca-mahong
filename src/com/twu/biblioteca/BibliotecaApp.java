@@ -22,7 +22,6 @@ public class BibliotecaApp {
     }
 
 
-
     private static Library library() {
         List<Book> listOfBooks = new ArrayList<Book>();
         Book book1 = new Book("The Dispossessed", "Ursula K. Le Guin", "2001");
@@ -53,9 +52,7 @@ public class BibliotecaApp {
         User user1 = new User("ma", "10253831432qq.com", "18829290322","123456","0001");
         users.add(user1);
 
-
         return new Library(listOfBooks,checkoutOfBooks,listOfMovie,checkoutOfMovies,users);
-
 
     }
 }

@@ -35,8 +35,6 @@ public class Application {
                     console.disPlayMenu();
                     n = console.getUserInput();
                 }
-            } else {
-                console.isSuccessfulLogin();
             }
         }
     }

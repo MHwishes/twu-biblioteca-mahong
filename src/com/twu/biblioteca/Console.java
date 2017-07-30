@@ -35,7 +35,7 @@ public class Console {
         if (libraryNumber.equals("0001") && password.equals("123456")) {
             return true;
         } else {
-            System.out.print("library Number or password wrong,please input again:");
+            System.out.print("\nlibrary Number or password wrong,please input again:");
             return false;
         }
 
