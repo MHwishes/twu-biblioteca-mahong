@@ -1,4 +1,4 @@
-package com.twu.biblioteca.Option.MovieOption;
+package com.twu.biblioteca.option.movieOption;
 
 import com.twu.biblioteca.Console;
 import com.twu.biblioteca.Library;

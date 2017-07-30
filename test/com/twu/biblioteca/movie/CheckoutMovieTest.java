@@ -2,7 +2,7 @@ package com.twu.biblioteca.movie;
 
 import com.twu.biblioteca.Console;
 import com.twu.biblioteca.Library;
-import com.twu.biblioteca.Option.MovieOption.CheckoutMovies;
+import com.twu.biblioteca.option.movieOption.CheckoutMovies;
 import org.junit.Before;
 import org.junit.Test;
 

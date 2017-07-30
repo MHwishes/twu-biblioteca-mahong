@@ -2,7 +2,7 @@ package com.twu.biblioteca.book;
 
 import com.twu.biblioteca.Console;
 import com.twu.biblioteca.Library;
-import com.twu.biblioteca.Option.BookOption.ReturnBook;
+import com.twu.biblioteca.option.bookOption.ReturnBook;
 import org.junit.Before;
 import org.junit.Test;
 

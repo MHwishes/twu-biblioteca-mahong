@@ -1,12 +1,12 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.Option.BookOption.BookList;
-import com.twu.biblioteca.Option.BookOption.CheckoutBook;
-import com.twu.biblioteca.Option.BookOption.ReturnBook;
-import com.twu.biblioteca.Option.MovieOption.CheckoutMovies;
-import com.twu.biblioteca.Option.MovieOption.MovieList;
-import com.twu.biblioteca.Option.MovieOption.ReturnMovies;
-import com.twu.biblioteca.Option.UserOption.UserList;
+import com.twu.biblioteca.option.bookOption.BookList;
+import com.twu.biblioteca.option.bookOption.CheckoutBook;
+import com.twu.biblioteca.option.bookOption.ReturnBook;
+import com.twu.biblioteca.option.movieOption.CheckoutMovies;
+import com.twu.biblioteca.option.movieOption.MovieList;
+import com.twu.biblioteca.option.movieOption.ReturnMovies;
+import com.twu.biblioteca.option.userOption.UserList;
 import com.twu.biblioteca.bean.Book;
 import com.twu.biblioteca.bean.Movie;
 import com.twu.biblioteca.bean.User;

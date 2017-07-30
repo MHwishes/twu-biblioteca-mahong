@@ -1,4 +1,4 @@
-package com.twu.biblioteca.Option.BookOption;
+package com.twu.biblioteca.option.bookOption;
 
 import com.twu.biblioteca.Library;
 import com.twu.biblioteca.MenuOption;

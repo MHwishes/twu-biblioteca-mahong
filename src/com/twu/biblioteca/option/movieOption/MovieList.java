@@ -1,19 +1,18 @@
-package com.twu.biblioteca.Option.UserOption;
+package com.twu.biblioteca.option.movieOption;
+
 
 import com.twu.biblioteca.Library;
 import com.twu.biblioteca.MenuOption;
 
-public class UserList implements MenuOption {
+public class MovieList implements MenuOption {
     private Library library;
 
-    public UserList(Library library) {
+    public MovieList(Library library) {
         this.library = library;
-
     }
 
     @Override
     public void execute() {
-        library.displayUsers();
+        library.displayMovies();
     }
-
 }
