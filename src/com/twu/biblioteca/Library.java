@@ -38,6 +38,16 @@ public class Library {
 
     }
 
+    public void displayMoviesWithNumbers() {
+        for (int i = 1; i <= movieList.size(); i++) {
+            System.out.print(i + ". ");
+            System.out.println(movieList.get(i - 1).getMovieDetail());
+        }
+
+    }
+
+
+
     public void displayCheckedOutBooksWithNumbers() {
         for (int i = 1; i <= booksCheckedOut.size(); i++) {
             System.out.print(i + ". ");
@@ -55,6 +65,18 @@ public class Library {
         }
         return false;
     }
+
+    public Boolean checkoutMovie(Integer movieIndex) {
+        int index = movieIndex - 1;
+        if (index >= 0 && index < movieList.size()) {
+            Movie movie = movieList.remove(index);
+            movieCheckedOut.add(movie);
+            return true;
+        }
+        return false;
+    }
+
+
 
 
     public Boolean returnBook(Integer bookIndex) {
