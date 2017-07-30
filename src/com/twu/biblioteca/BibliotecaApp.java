@@ -16,6 +16,7 @@ public class BibliotecaApp {
         menuOptions.put("3",new ReturnBook(library,console));
         menuOptions.put("4",new MovieList(library));
         menuOptions.put("5",new CheckoutMovies(library,console));
+        menuOptions.put("6",new ReturnMovies(library,console));
         new Application(menuOptions,console).start();
     }
 
