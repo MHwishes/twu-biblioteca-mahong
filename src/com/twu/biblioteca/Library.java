@@ -5,10 +5,14 @@ import java.util.List;
 
 public class Library {
     private List<Book> bookList;
+    private List<Book> booksCheckedOut;
 
-    Library(List<Book> bookList) {
+
+    public Library(List<Book> bookList, List<Book> booksCheckedOut) {
         this.bookList = bookList;
+        this.booksCheckedOut = booksCheckedOut;
     }
+
 
     public void displayBooks() {
         for (Book book : bookList) {
@@ -16,4 +20,41 @@ public class Library {
         }
     }
 
+    public void displayBooksWithNumbers() {
+        for (int i = 1; i <= bookList.size(); i++) {
+            System.out.print(i + ". ");
+            System.out.println(bookList.get(i - 1).getDetails());
+        }
+
+    }
+
+    public void displayCheckedOutBooksWithNumbers() {
+        for (int i = 1; i <= booksCheckedOut.size(); i++) {
+            System.out.print(i + ". ");
+            System.out.println(booksCheckedOut.get(i - 1).getDetails());
+        }
+
+    }
+
+    public Boolean checkoutBook(Integer bookIndex) {
+        int index = bookIndex - 1;
+        if (index >= 0 && index < bookList.size()) {
+            Book book = bookList.remove(index);
+            booksCheckedOut.add(book);
+            return true;
+        }
+        return false;
+    }
+
+
+    public Boolean returnBook(Integer bookIndex) {
+        int index = bookIndex - 1;
+        if (index >= 0 && index < booksCheckedOut.size()) {
+            Book book = booksCheckedOut.remove(index);
+            bookList.add(book);
+            return true;
+        }
+        return false;
+
+    }
 }
