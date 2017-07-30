@@ -7,14 +7,14 @@ public class BibliotecaApp {
     public static void main(String[] args) {
 
         Map<String, MenuOption> menuOptions = new HashMap<String, MenuOption>();
+
         Library library = library();
-        menuOptions.put("1",new BookList(library));
-
-
         Console console = new Console();
 
-
-        new Application(menuOptions,console,library()).start();
+        menuOptions.put("1",new BookList(library));
+        menuOptions.put("2",new CheckoutBook(library,console));
+        menuOptions.put("3",new ReturnBook(library,console));
+        new Application(menuOptions,console).start();
     }
 
 
