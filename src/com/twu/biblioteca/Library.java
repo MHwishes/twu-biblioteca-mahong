@@ -8,13 +8,15 @@ public class Library {
     private List<Book> booksCheckedOut;
     private List<Movie> movieList;
     private List<Movie> movieCheckedOut;
+    private List<User> users;
 
 
-    public Library(List<Book> bookList, List<Book> booksCheckedOut,List<Movie> movieList, List<Movie> movieCheckedOut) {
+    public Library(List<Book> bookList, List<Book> booksCheckedOut,List<Movie> movieList, List<Movie> movieCheckedOut,List<User> users) {
         this.bookList = bookList;
         this.booksCheckedOut = booksCheckedOut;
         this.movieCheckedOut = movieCheckedOut;
         this.movieList = movieList;
+        this.users=users;
     }
 
 
@@ -27,6 +29,12 @@ public class Library {
     public void displayMovies() {
         for (Movie movie : movieList) {
             System.out.println(movie.getMovieDetail());
+        }
+    }
+
+    public void displayUsers() {
+        for (User user : users) {
+            System.out.println(user.getUserDetail());
         }
     }
 
@@ -107,4 +115,5 @@ public class Library {
         return false;
 
     }
+
 }

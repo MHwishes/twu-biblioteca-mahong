@@ -23,7 +23,7 @@ public class Application {
                 String n = console.getUserInput();
 
                 while (true) {
-                    if (n.equals("7")) {
+                    if (n.equals("8")) {
                         System.exit(-1);
                     }
                     if (menu.containsKey(n)) {

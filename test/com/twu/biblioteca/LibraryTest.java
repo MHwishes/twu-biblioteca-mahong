@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 import static org.mockito.Mockito.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,9 @@ public class LibraryTest {
     private List<Movie> movieList;
     private List<Movie> MoviesCheckedOut;
 
+    private List<User> userList;
+    private User user1;
+
     private Book book1;
     private Book checkedOutBook1;
 
@@ -25,7 +29,7 @@ public class LibraryTest {
     private Library myLibrary;
 
     @Before
-    public void setup(){
+    public void setup() {
         bookList = new ArrayList<Book>();
         book1 = mock(Book.class);
         bookList.add(book1);
@@ -33,6 +37,10 @@ public class LibraryTest {
         movieList = new ArrayList<Movie>();
         Movie1 = mock(Movie.class);
         movieList.add(Movie1);
+
+        userList = new ArrayList<User>();
+        user1 = mock(User.class);
+        userList.add(user1);
 
         booksCheckedOut = new ArrayList<Book>();
         checkedOutBook1 = mock(Book.class);
@@ -42,7 +50,7 @@ public class LibraryTest {
         MovieCheckedOut1 = mock(Movie.class);
         MoviesCheckedOut.add(MovieCheckedOut1);
 
-        myLibrary = new Library(bookList, booksCheckedOut,movieList,MoviesCheckedOut);
+        myLibrary = new Library(bookList, booksCheckedOut, movieList, MoviesCheckedOut, userList);
     }
 
     @Test
@@ -54,7 +62,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void shouldPrintBooksWhenLibraryHasMultipleBooks(){
+    public void shouldPrintBooksWhenLibraryHasMultipleBooks() {
         Book book2 = mock(Book.class);
         bookList.add(book2);
 
@@ -68,6 +76,7 @@ public class LibraryTest {
             verify(book).getDetails();
         }
     }
+
     @Test
     public void shouldReturnFalseWhenInvalidBookCheckedOut() {
         Book book2 = mock(Book.class);

@@ -17,6 +17,7 @@ public class BibliotecaApp {
         menuOptions.put("4",new MovieList(library));
         menuOptions.put("5",new CheckoutMovies(library,console));
         menuOptions.put("6",new ReturnMovies(library,console));
+        menuOptions.put("7",new UserList(library));
         new Application(menuOptions,console).start();
     }
 
@@ -48,7 +49,12 @@ public class BibliotecaApp {
         checkoutOfMovies.add(checkedOutMove1);
         checkoutOfMovies.add(checkedOutMove2);
 
-        return new Library(listOfBooks,checkoutOfBooks,listOfMovie,checkoutOfMovies);
+        List<User> users = new ArrayList<User>();
+        User user1 = new User("ma", "10253831432qq.com", "18829290322","123456","0001");
+        users.add(user1);
+
+
+        return new Library(listOfBooks,checkoutOfBooks,listOfMovie,checkoutOfMovies,users);
 
 
     }

@@ -21,7 +21,8 @@ public class Console {
         System.out.println("4. List Movies");
         System.out.println("5. checkout Movie");
         System.out.println("6. return  movie");
-        System.out.println("7. Quit");
+        System.out.println("7. list users");
+        System.out.println("8. Quit");
         System.out.println();
     }
 
